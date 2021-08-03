@@ -1,9 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
     private Vector2 direction = Vector2.right;
     private float speed = 1f;
+    private List<Transform> segments;
+
+    private void Start()
+    {
+        segments = new List<Transform>();
+        segments.Add(this.transform);
+    }
 
     private void Update()
     {
